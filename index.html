@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnóstico Finanzas Simples | Metodología COTA por Mayte Gaby</title>
+    <link href="https://jsdelivr.net" rel="stylesheet">
+    <style>
+        :root { --primario: #1a2a3a; --acento: #48bb78; --fondo: #f0f4f8; }
+        body { background-color: var(--fondo); font-family: 'Segoe UI', sans-serif; color: #333; }
+        .card { border-radius: 20px; border: none; box-shadow: 0 15px 35px rgba(0,0,0,0.1); overflow: hidden; }
+        .header-cota { background: var(--primario); color: white; padding: 40px 20px; text-align: center; }
+        .pilar-badge { background: #e2e8f0; color: var(--primario); font-weight: bold; padding: 5px 15px; border-radius: 50px; font-size: 0.8rem; }
+        .regla-box { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 15px; margin-top: 10px; }
+        .btn-enviar { background-color: var(--acento); border: none; padding: 15px; font-weight: bold; font-size: 1.1rem; border-radius: 12px; transition: 0.3s; color: white; cursor: pointer; }
+        .btn-enviar:hover { background-color: #38a169; transform: translateY(-2px); }
+        .form-label { font-weight: 600; margin-top: 10px; }
+        .footer-text { font-size: 0.85rem; color: #777; margin-top: 20px; text-align: center; }
+    </style>
+</head>
+<body>
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-lg">
+                <div class="header-cota">
+                    <h1 class="h3 mb-1">Finanzas Simples</h1>
+                    <p class="mb-0 opacity-75">Diagnóstico Metodología COTA por Mayte Gaby</p>
+                </div>
+
+                <div class="card-body p-4 p-md-5">
+                    <!-- FORMULARIO CONECTADO A TU FORMSPREE -->
+                    <form action="https://formspree.io/f/xeepznwo" method="POST">
+                        
+                        <!-- DATOS DE CONTACTO -->
+                        <div class="row g-3 mb-4">
+                            <div class="col-md-12 text-center mb-2">
+                                <span class="pilar-badge">CONTACTO</span>
+                            </div>
+                            <div class="col-md-12">
+                                <label class="form-label">Nombre Completo</label>
+                                <input type="text" name="Nombre" class="form-control" placeholder="Escribe tu nombre" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Correo Electrónico</label>
+                                <input type="email" name="Email" class="form-control" placeholder="tu@correo.com" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">WhatsApp</label>
+                                <input type="tel" name="WhatsApp" class="form-control" placeholder="Ej: +52 1..." required>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <!-- C - CONOCER -->
+                        <div class="mb-5">
+                            <span class="pilar-badge">C - CONOCER</span>
+                            <label class="form-label d-block mt-3">Para llevar mi presupuesto y conocer mis números, prefiero:</label>
+                            <select name="Metodo_Presupuesto" class="form-select" required>
+                                <option value="" disabled selected>Selecciona una opción...</option>
+                                <option value="Libreta">Libreta (Papel y pluma)</option>
+                                <option value="App">App en el Celular</option>
+                                <option value="Excel">Excel / Google Sheets</option>
+                            </select>
+                        </div>
+
+                        <!-- O - ORGANIZAR (MODELO 70-20-10) -->
+                        <div class="mb-5">
+                            <span class="pilar-badge">O - ORGANIZAR</span>
+                            <label class="form-label d-block mt-3">Regla 70/20/10 para organizar tus ingresos:</label>
+                            
+                            <div class="regla-box mb-3">
+                                <div class="row text-center small fw-bold">
+                                    <div class="col-4 border-end">70%<br><span class="text-muted fw-normal">Esenciales</span></div>
+                                    <div class="col-4 border-end">20%<br><span class="text-muted fw-normal">Deseos</span></div>
+                                    <div class="col-4">10%<br><span class="text-muted fw-normal">Ahorro/Acción</span></div>
+                                </div>
+                            </div>
+
+                            <label class="form-label">¿Qué área te cuesta más trabajo equilibrar hoy?</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="Descontrol_70_20_10" value="70_Esenciales" id="r1" required>
+                                <label class="form-check-label" for="r1">70% Gastos Esenciales (Siento que no me alcanza)</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="Descontrol_70_20_10" value="20_Deseos" id="r2">
+                                <label class="form-check-label" for="r2">20% Gastos de Deseo (Gustos y gastos hormiga)</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="Descontrol_70_20_10" value="10_Ahorro" id="r3">
+                                <label class="form-check-label" for="r3">10% Ahorro / Ayuda (Nunca logro separar esta parte)</label>
+                            </div>
+                        </div>
+
+                        <!-- T - TOMAR DECISIONES -->
+                        <div class="mb-5">
+                            <span class="pilar-badge">T - TOMAR DECISIONES</span>
+                            <label class="form-label d-block mt-3">¿Qué decisión financiera inteligente te urge tomar?</label>
+                            <textarea name="Decision_Urgente" class="form-control" rows="2" placeholder="Ej: Liquidar deudas, invertir, fondo de emergencia..."></textarea>
+                        </div>
+
+                        <!-- A - ACCIÓN / AHORRO -->
+                        <div class="mb-4 text-center">
+                            <span class="pilar-badge">A - ACCIÓN</span>
+                            <p class="mt-3 fw-bold text-success">¡Es momento de simplificar tus finanzas!</p>
+                        </div>
+
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-enviar">
+                                Enviar Diagnóstico y Contactar a Mayte Gaby
+                            </button>
+                        </div>
+
+                        <div class="footer-text">
+                            <p>Recibirás una copia de tus respuestas por correo.<br><strong>Finanzas Simples por Mayte Gaby</strong></p>
+                        </div>
+
+                        <!-- Respuesta automática para el correo del usuario -->
+                        <input type="hidden" name="_subject" value="Tu Diagnóstico COTA de Finanzas Simples">
+                        <input type="hidden" name="_replyto" value="MayteGaby@tuservicio.com"> 
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
